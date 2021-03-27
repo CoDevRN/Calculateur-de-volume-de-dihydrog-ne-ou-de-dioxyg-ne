@@ -1,0 +1,47 @@
+# Programme pour calculer le volume de Dihydrogène ou de dioxygène(Prod by David)
+
+import re
+re.compile(r"\d{3}")
+
+# Présentation du Programme
+print("Ce progamme va calculer pour le volume de Dihydrogène ou de Dioxygène.")
+
+# en cour d'execution
+running = True
+
+# le volume de dihydrogène de base
+vol_dihy = 0
+# le volume de dioxygène de base
+vol_dioxy = 0
+
+# réponse vallable
+available_ans = ["dihydrogène", "h", "dioxygène", "o"]
+
+# tant que le programme est en cour d'excution
+while running == True:
+
+    # Demander à l'utilisateur d'entrer le nom du Corps
+    user_choice = input("Veillez entrer le nom du corps [dihydrogène ou dioxygène(h\o)] : ")
+
+    # mettre les caractère contenue dans 'user_choice' en minuscule
+    str.lower(user_choice)
+
+    # Si le choix de l'utilisateur est le 'dihydrogène'
+    if user_choice == "dihydrogène" or user_choice == "h":
+        # Demander à l'utilisateur d'entrer le volume du 'dihydrogène'
+        vol_dihy = int(input("Veillez entrer le volume de Dihydrogène : "))
+        # le volume de Dioxygène
+        vol_dioxy = vol_dihy / 2
+        # Afficher à l'utilisateur le volume de dioxygène
+        print("Le volume de dioxygène est", vol_dioxy, ".")
+
+    if user_choice == "dioxygène" or user_choice == "o":
+        # Demander à l'utilisateur d'entrer le volume du 'dioxygène'
+        vol_dioxy = int(input("Veillez entrer le volume de Dioxygène : "))
+        # le volume de Dihydrogène
+        vol_dihy = vol_dioxy * 2
+        # Afficher à l'utilisateur le volume de dihydrogène
+        print("Le volume de dihydrogène est", vol_dihy, ".")
+
+    while user_choice =! available_ans:
+        print('Erreur de syntaxe, vous avez mal écrit votre : ')
